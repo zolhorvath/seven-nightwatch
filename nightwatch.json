@@ -1,0 +1,57 @@
+{
+  "src_folders" : ["tests"],
+  "output_folder" : "reports",
+  "custom_commands_path" : ["commands"],
+  "custom_assertions_path" : "",
+  "page_objects_path" : "",
+  "globals_path" : "",
+
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://incubator.eight.localhost",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "shots/"
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "headless",
+            "disable-gpu",
+            "disable-web-security",
+            "ignore-certificate-errors"
+          ]
+        }
+      }
+    },
+
+    "safari": {
+      "desiredCapabilities": {
+        "browserName": "safari",
+        "chromeOptions": null
+      }
+    },
+
+    "firefox": {
+      "launch_url" : "http://incubator.eight.localhost",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "shots/"
+      },
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "chromeOptions": null,
+        "moz:firefoxOptions": {
+          "args": ["-headless"]
+        }
+      }
+    }
+  }
+}
